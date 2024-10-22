@@ -1,0 +1,244 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* //////////////////////////////////////////////////////// */
+
+@font-face {
+    font-family: slackside;
+    src: url(./fonts/slacksideone-regular-webfont.woff2);
+}
+
+:root {
+    background-color: #555555;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:
+        linear-gradient(rgba(44, 32, 20, 0.774), rgba(0, 0, 0, 0.247)),
+        url(imgs/bg.jpg);
+    background-size: cover;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    position: absolute;
+    top: 10px;
+}
+
+nav {
+    /* outline: 1px greenyellow solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.navtab {
+    height: calc(2.7vw + 6vh);
+    width: calc(4vw + 16vh);
+    font-size: calc(0.5vw + 4vh);
+    border: none;
+    background: radial-gradient(closest-side, rgba(0,0,0,0.4), rgba(0,0,0,0));
+    color: rgb(255, 214, 163);
+    transition: color 0.3s, transform 0.2s;
+}
+
+.homeImg,
+.food {
+    height: 100vh;
+}
+
+.logo {
+    margin-bottom: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(2.7vw + 6vh);
+    width: calc(26vw + 26vh);
+    position: absolute;
+    font-size: calc(1vw + 12vh);
+    align-self: center;
+    background: radial-gradient(closest-side, rgba(0,0,0,0.4), rgba(0,0,0,0.3), rgba(0,0,0,0.0));
+    color: rgb(255, 214, 163);
+    white-space: nowrap;
+}
+
+.reserve {
+    border: none;
+    margin-top: 38vh;
+    height: calc(2.7vw + 6vh);
+    width: calc(20vw + 26vh);
+    position: absolute;
+    font-size: calc(0.5vw + 4vh);
+    background: radial-gradient(closest-side, rgba(0,0,0,0.4), rgba(0,0,0,0.3), rgba(0,0,0,0.0));
+    color: rgb(255, 214, 163);
+    transition: color 0.3s, transform 0.2s;
+}
+
+.socDiv {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(4vw + 16vh);
+    height: 50px;
+    bottom: 3px;
+    gap: 10px;
+    background: radial-gradient(closest-side, rgba(0,0,0,0.5), rgba(0,0,0,0.3), rgba(0,0,0,0.0));
+}
+
+.social {
+
+    height: 3vh;
+    margin: 0px;
+    filter: invert(90%) sepia(100%) saturate(400%) hue-rotate(-52deg);
+    transition: transform 0.2s;
+}
+
+.navtab,.logo,.reserve,.dishName,.aboutLogo,.aboutText {
+    font-family: slackside, system-ui;
+}
+
+.navtab:hover,
+.reserve:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+
+.social:hover {
+    filter: invert(90%);
+    transform: scale(1.1);
+}
+
+.dishName {
+    bottom: calc(0.1vw + 1.8vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    font-size: calc(0.5vw + 4vh);
+    color: rgb(117, 90, 56);
+    width: 22ch;
+    height: calc(2.7vw + 6vh);    
+    border-bottom: 2px black ;
+}
+
+.arrow_left,
+.arrow_right{
+    position: absolute;
+    width: 10vw;
+    height: 10vh;
+    filter: invert(90%);
+    transition: transform 0.2s;
+    padding: 6vw 6vw 6vw 6vw;
+}
+
+.arrow_left{
+    right: calc(56vh + 35vw);
+}
+
+.arrow_right{
+    left: calc(56vh + 34vw);
+}
+
+.arrow_left:hover,
+.arrow_right:hover {
+    transform: scale(1.2);
+}
+
+.aboutImg {
+    height: 100vh;
+}
+
+.aboutText {
+    margin-top: 0vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(15vw + 15vh);
+    height: calc(23vw + 23vh);;
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: .05rem;
+    position: absolute;
+    font-size: calc(1vw + 1vh);
+    align-self: center;
+    background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.5), rgba(0,0,0,0.0));
+    color: rgb(255, 214, 163);
+}
+
+.aboutLogo {
+    top: 17vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(2.7vw + 6vh);
+    width: calc(15vw + 15vh);
+    position: absolute;
+    font-size: calc(1.5vw + 8vh);
+    align-self: center;
+    color: rgb(255, 214, 163);
+    white-space: nowrap;
+    margin-bottom: 0vh;
+}
